@@ -46,7 +46,8 @@ public class ClsService /*extends Student*/{
 		// ** static이 붙은 필드(변수)는 '클래스명.변수명' 으로 사용함**
 		System.out.println(Student.schoolName);
 		
-		System.out.println(Student.schoolName);
+		Student.schoolName = "KH";
+		System.out.println("변경후 : " + Student.schoolName);
 		
 		/* static
 		 * 1) 공유 메모리 영역 ( 또는 정적 메모리 영역) 이라고 함
