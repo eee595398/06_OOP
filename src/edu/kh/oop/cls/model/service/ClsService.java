@@ -76,6 +76,45 @@ public class ClsService /*extends Student*/{
 		//User 객체 필드 초기화 확인
 		System.out.println(u1.getUserId() );
 		
+		// 문제점 : u1이 참조하고 있는 User 객체와 u2가 참조하고 있는 User 객체의 필드값이 모두 동일함
+		// 같은 기본 생성자로 User 객체를 생성했기 때문에 
+		
+        // 해결 방법 1 : setter를 이용해서 새로운 값 대입 
+		//u2.setUserId("abc");
+		//u2.setUserPw("1w2");
+
+		// 해결 방법 2 : 매개변수 생성자를 이용해서 객체가 생성될 때부터 다른 값으로 필드를 초기화 
+		
+		
+		User u3 = new User("test3","password3"); // 매개변수 생성자
+		// 생성자 수행시 전달 할 값을 작성( 순서 꼭 지켜야한다)
+		
+		System.out.println(u3.getUserId());
+		System.out.println(u3.getUserId());
+		
+		
+		
+		
+		
+	}
+	public void ex4() {// 매개변수 생성자 예제 
+		
+		User u1 = new User();// 기본 생성자 
+		User u2 = new User("user02","pass02");//매개변수 2개 생성자
+		User u3 = new User("user03","pass03");// 매개변수 5개 생성자(다 못 씀)
+		
+		System.out.printf("u1 :%s/%s\n ",
+				u1.getUserId(), u1.getUserPw()
+				
+				
+				);
+		
+		
+		System.out.printf("u3 :%s/%s\n ",
+				u1.getUserId(), u1.getUserPw()
+				
+				
+				);
 		
 	}
 	

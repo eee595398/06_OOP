@@ -17,7 +17,8 @@ public class ClsRun {
 		
 		
 		//service.ex2();
-		service.ex3();
+		//service.ex3();
+		service.ex4();
 	}
 
 }
